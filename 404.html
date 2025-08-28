@@ -1,0 +1,21 @@
+<head>
+  <title>Redirecting...</title>
+</head>
+<body>
+  <script>
+    const redirects = [
+      {
+        from: '/dad-bday',
+        to: 'https://haywoodsloan.github.io/happy_birthday/?name=dad',
+      },
+    ];
+
+    for(const redirect of redirects) {
+      const matcher = new RegExp(redirect.from, "i");
+      if (matcher.test(location.pathname)) {
+        location.replace(redirect.to);
+        break;
+      }
+    }
+  </script>
+</body>
